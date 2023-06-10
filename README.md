@@ -20,9 +20,18 @@ HTML é uma linguagem de marcação utilizada na construção de páginas na Web
 `<!DOCTYPE html>` Tem a função de indicar ao navegador qual tipo de página ele irá renderizar<br>
 `<head></head>` Cabeça (contém informações sobre a sua página)<br>
 `<body></body>` Corpo (é o que será exibido no navegador)<br>
-`<h1></h1>` Tútulos que temos 6 níveis de subtítulos<br>
+`<h1></h1>` Títulos que temos 6 níveis de subtítulos<br>
 `<p></p>` Parágrafo<br>
 `<a href=""></a>` Âncora (para links)<br>
 `<ol></ol>` Listas Ordenadas<br>
 `<ul></ul>` Listas não Ordenadas<br>
 `<dl></dl>` Lista de Definições<br>
+`<table></table>` Tabela<br>
+`<tbody></tbody>` Corpo da Tabela<br>
+`<tr></tr>` Linha da Tabela<br>
+`<td></td>` Coluna da Tabela<br>
+`<thead></thead>` Cabeçalho da Tabela<br>
+`<th></th>` Define o titulo de cada coluna<br>
+`<tfoot></tfoot>` Rodapé da Tabela<br>
+`<img src="">` Imagem
+`<center></center>` Centralizar HTML
