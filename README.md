@@ -148,18 +148,13 @@ Reduz o tamanho do texto. No HTML5 geralmente se refere à informações redunda
 
 #### **Exemplo:**
 ```
-<p><strong>Texto em negrito </strong> Regular text
-<em>texto em itálico < /em> texto normal 
-</p>
+<p><strong>Texto em negrito </strong> Regular text<em>texto em itálico </em> texto normal</p>
 
-<blockquote>
-Tudo deveria se tornar o mais simples possível,
-mas não simplificado.<cite>- Albert Einstein</cite>
-</blockquote>
+<blockquote>Tudo deveria se tornar o mais simples possível, mas não simplificado.<cite>- Albert Einstein</cite></blockquote>
 
-<pre>
-</pre>
-<p> <code>algum código </code></p>
+<pre>Texto pré-formatado</pre>
+
+<p><code>algum código </code></p>
 ```
 
 ### **Links**
@@ -219,21 +214,93 @@ Coordinadas da informação vital do formato. Exemplo: vértices para triângulo
 
 #### **Exemplo:**
 ```
-<img src="planets.gif" width="145" height="126"
-alt="Planets" usemap="#planetmap">
+<img src="planets.gif" width="145" height="126 alt="Planets" usemap="#planetmap">
 <map name="planetmap">
-<area shape="rect" coords="0,0,60,100"
-href="sun.htm" alt="Sun">
-<area shape="circle" coords="90,58,3"
-href="mercur.htm" alt="Mercury">
-<area shape="circle" coords="124,58,8"
-href="venus.htm" alt="Venus">
+    <area shape="rect" coords="0,0,60,100" href="sun.htm" alt="Sun">
+    <area shape="circle" coords="90,58,3"href="mercur.htm" alt="Mercury">
+    <area shape="circle" coords="124,58,8"href="venus.htm" alt="Venus">
 </map>
 ```
 
 ### **Listas**
 
+`<ol>...</ol>`
+Tag para lista ordenadas ou numeradas de itens.
 
+`<ul>...</ul>`
+Contrária à tag acima, esta é para itens desordenados.
+
+`<li>...</li>`
+Item individual como parte da lista.
+
+`<dl>...</dl>`
+Tag para listas de itens com definições.
+
+`<dt>...</dt>`
+A difinição de um único termo em linha com conteúdo.
+
+`<dd>...</dd>`
+A descrição do termo definido.
+
+#### **Exemplo:**
+
+```
+<ol>
+    <li>Segunda</li>
+    <li>Terça</li>
+    <li>Quarta</li>
+</ol>
+<ul>
+    <li>França</li>
+    <li>Alemanha</li>
+    <li>Itália</li>
+</ul>
+<dl>
+    <dt>Toyota</dt>
+    <dd>Marca de carro japonesa</dd>
+    <dt>Armani</dt>
+    <dd>Marca de roupa italiana</dd>
+</dl>
+```
+### **Formulários**
+
+`<form>...</form>`
+A tag pai de um formulário HTML.
+
+`action="url"`
+A URL listada aqui é onde os dados do formulários serão enviados assim que preenchidos pelo usuário.
+
+`method="..."`
+Especifica qual método HTTP(POST ou GET) é utilizado para envio de formulário.
+
+`enctype="..."`
+Apenas para métodos POST, a tag dita o esquema de codificação para ser usado quando o formulário é enviado.
+
+`autocomplete`
+Determina se o formulário possui preenchimento automático habilitado.
+
+`novalidate`
+Dtermina se o formulário deve ser validado antes do envio.
+
+`accept-charsets`
+Determina a codificação dos caracteres quando o formulário é enviado.
+
+`target`
+Após o envio, a resposta do formulário é mostrada para onde a tag se refere, geralmente possui os seguintes valores: `values: _blank, _self, _parent, _top`.
+
+`<fieldset>...</fieldset>`
+Identifica o grupo de todos os campos no formulário.
+
+`<label>...</label>`
+É utilizado para marcar um campo no formulário.
+
+`<legend>...</legend>`
+Opera como legenda para o elemento `<fieldset>`.
+
+`<input/>`
+Esta tag é utilizada para receber informações (input) do usuário. O tipo de informação é determinado por um número de atributos.
+
+### **Atributos Tipo `input`**
 
 
 
