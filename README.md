@@ -302,39 +302,311 @@ Esta tag é utilizada para receber informações (input) do usuário. O tipo de 
 
 ### **Atributos Tipo `input`**
 
+`type="..."`
+Determina o tipo de input (texto, datas, senha) que é pedido do usuário.
+
+`name="..."`
+Especifica o nome do campo input.
+
+`value="..."`
+Especifica o valor contido atualmente no campo input.
+
+`size="..."`
+Determina a largura do elemento input (número de caracteres).
+
+`maxlength="..."`
+Especifica o máximo de caracteres permitidos no campo input.
+
+`required`
+Torna um campo do input obrigatório para preenchimento do usuário. O formulário não pode ser enviado se um campo obrigat´rio permanece vazio.
+
+`width="..."`
+Determina a largura do elemento input, em pixels.
+
+`height="..."`
+Determina a altura do elemento input, em pixels.
+
+`placeholder="..."`
+Pode ser usado para dar dicas ao usuário sobre o tipo de dados solicitados.
+
+`pattern="..."`
+Especifica uma explessão regular, que pode ser utilizada na procura por padrões no texto do usuário.
+
+`min="..."`
+O valor mínimo permitido para um elemento `<input>`.
+
+`max="..."`
+O valor máximo permitido para um elemento `<input>`.
+
+`autofocus`
+Força o foco no elemento input quando página está totalmente carregada.
+
+`disabled`
+Desabilita o elemento input. O usuário não possui mais pemissão para inserir os dados.
+
+`<textarea>...</textarea>`
+Para strings maiores de input. Pod ser usado para obter um texto com muitas sentenças do usuário.
+
+`<select>...</select>`
+Esta tag especifica uma lista de opções que o usuário pode escolher.
+
+### **Atributo de `<select`**
+
+`name="..."`
+O nome de uma lista de opções em particular.
+
+`size="..."`
+O número total de opções dadas ao usuário.
+
+`multiple`
+Define se o usuário pode escolher ais de uma opção da lista.
+
+`required`
+Especifica se a escolha da uma opção é necessária para o envio do fomrulário.
+
+`autofocus`
+Especifica que uma lista automaticamente entra em foco ao carregar a página.
+
+`<option>...</option>`
+Tag para listar itens individuais em uma lista de opções.
+
+### Atributos de `<option>`
+
+`value="..."`
+O texto visível para o usuário para qualquer opção dada.
+
+`selected`
+Determina qual opção é selecionada por padrão assim que o formulário carrega.
+
+`<button>...</button>`
+Tag para criação de um botão de envio para o formulário.
+
+#### **Exemplo:**
+
+```
+<form action="form_submit.php" method="post">
+    <fieldset>
+        <legend>Bio:</legend>
+        Nome :<br>
+        <input type="text" name="first-name" value="John" placeholder="Por favor informe seu nome aqui"><br>
+        Sobrenome:<br>
+        <input type="text" name="last-name" value="Doe" placeholder="Por favor informe seu sobre nome aqui"><br><br>
+        Esporte favorito:<br>
+        <select>
+            <option value="futebol">Soccer</option>
+            <option value="tênis">Tennis</option>
+            <option value="golf">Golf</option>
+        </select>
+        <textarea name="description"></textarea>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+```
+
+### **Tabelas**
+`<table>...</table>`
+Marca uma tabela em uma página.
+
+`<caption>...</caption>`
+Uma descrição da tabela é colocada dentro desta tag.
+
+`<thead>...</thead>`
+Especifica informações referente a colunas especificadas da tabela.
+
+`<tbody>...</tbody>`
+O conteúdo de uma tabela, onde os dados são mantidos.
 
 
+`<tfoot>...</tfoot>`
+Determina o rodapé de uma tabela.
+
+`<tr>...</tr>`
+Denota uma única fileira em uma tabela.
+
+`<th>...</th>`
+O valor de um cabeçalho de uma coluna de tabela.
+
+`<td>...</td>`
+Um único campo de uma tabela. Contém o valor/dado atual.
+
+`<colgroup>...</colgroup>`
+Usada para agrupar colunas juntas.
+
+`<col/>`
+Denota uma coluna dentro de uma tabela.
+
+#### **Exemplo:**
+
+```
+<table>
+    <colgroup>
+        <col span="2">
+        <col>
+    </colgroup>
+    <tr>
+        <th>Nome</th>
+        <th>Curso</th>
+        <th>Nota</th>
+    </tr>
+    <tr>
+        <td>Bob</td>
+        <td>Direito</td>
+        <td>3.55</td>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td>Medicina</td>
+        <td>3.61</td>
+    </tr>
+</table>
+
+```
+
+### Objetos e iFrames
+
+`<object>...</object>`
+Esta tag é utilizada para incorporar tipos de mídia adicionais à página. Pode ser áudio, video, documento (pdf), etc.
+
+`height="..."`
+Determina a altura do objeto em pixels.
+
+`width="..."`
+Determina a largura do objeto em pixels.
+
+`type="..."`
+O tipo/formato do conteúdo do objeto.
+
+`<iframe>...</iframe>`
+Um bloco de conteúdo em linha, utilizado como um contâiner flexível para arquivos de mídia. Ele flutua dentro da página, siginifica que é colocado relativo à outros itens da página.
+
+### **Atributos iFrames**
+
+`name="..."`
+O nome do iFrame.
+
+`src="..."`
+A fonte URL/caminho do objeto multimídia para ser inserido dentro do iFrame.
+
+`srcdoc="..."`
+Qualquer conteúdo HTML para ser mostrado dentro do iFrame.
+
+`height="..."`
+Determina a altura do iFrame.
+
+`width="..."`
+Determina a largura do item incorporado.
+
+`<param/>`
+Para customização do iFrame. Isso inclui parâmetros adicionais para ir junto com o conteúdo.
+
+`<embed>...</embed>`
+É utilizado para incorporar obejtos externos, como plugins (ex. flash video).
+
+#### **Exemplo:**
+```
+<object width="1000" height="1000"></object>
+<iframe src="some_other_webpage.html" width="500" height="500"></iframe>
+<embed src="some_video.swf" width="500" height=“500"></embed>
+
+```
+
+### **Novas Tags HTML5**
+
+`<!DOCTYPE html>`
+Tem a função de indicar ao navegador qual tipo de página ele irá renderizar.
+
+`<header>...</header>`
+Especifica o cabeçalho da página. Também pode ser utilizada para objetos dentro da página.
+
+`<footer>...</footer>`
+Especifica o rodapé da página. Tambem pode ser utilizada para objetos dentro da página.
+
+`<main>...</main>`
+Marca o conteúdo principal da página.
+
+`<article>...</article>`
+Denota um artigo.
+
+`<aside>...</aside>`
+Denota o conteúdo mostrado em um canto da página.
+
+`<section>...</section>`
+Especifica um seção especifica da página.
+
+`<details>...</details>`
+Usado para informações adicionais. O usuário tem a opção de visualizar ou esconder isso.
+
+`<summary>...</summary>`
+Usado como cabeçalho para a tag acima. Sempre visível para o usuário.
+
+`<dialog>...</dialog>`
+Usado para criar uma caixa de diálogo.
+
+`<figure>...</figure>`
+Uma tag reservada para figuras (diagramas, gráficos) no HTML5.
+
+`<figcaption>...</figcaption>`
+Uma descrição de um figura colocada dentro dessa tag.
+
+`<mark>...</mark>`
+Usado para destacar uma parte específica do texto.
+
+`<nav>...</nav>`
+Links de navegação para o usuário em uma página.
+
+`<menuitem>...</menuitem>`
+Um item específico de uma lista ou menu.
+
+`<meter>...</meter>`
+Mediação de dados dentro de um paâmetro definido.
+
+`<progress>...</progress>`
+Tipicamente usado como uma barra de progresso, usado para medir o processo.
+
+`<rp>...</rp>`
+Esta tag é para mostrar texto em navegadores que não possuem suporte para Ruby.
+
+`<rt>...</rt>`
+Mostra detalhes de caracteres do leste asiático.
+
+`<ruby>...</ruby>`
+Descreve uma anotação Ruby para tipografica do leste asiático.
+
+`<time>...</time>`
+Tag para formatação de dia e hora.
 
 
+`<wbr/>`
+Uma quebra de linha dentro do conteúdo.
 
+`<center>...</center>`
+Centralizar a estrutura composta dentro da tag.
 
+### **Objetos de Caracteres Coletivos**
 
+`&#34; &quote;`
+Sinais de citação - `"`
 
+`&#60; &lt;`
+Sinal de menor que - `<`
 
-### Tags
-`<!DOCTYPE html>` Tem a função de indicar ao navegador qual tipo de página ele irá renderizar<br>
-`<head>` Cabeça (contém informações sobre a sua página)<br>
-`<body>` Corpo (é o que será exibido no navegador)<br>
-`<h1>` Títulos que temos 6 níveis de subtítulos<br>
-`<p>` Parágrafo<br>
-`<a href="">` Âncora (para links) com o atributo `href` cria-se um hiperligação nas páginas web<br>
-`<ol>` Listas Ordenadas<br>
-`<ul>` Listas não Ordenadas<br>
-`<dl>` Lista de Definições<br>
-`<table>` Tabela<br>
-`<tbody>` Corpo da Tabela<br>
-`<tr>` Linha da Tabela<br>
-`<td>` Coluna da Tabela<br>
-`<thead>` Cabeçalho da Tabela<br>
-`<th>` Define o titulo de cada coluna<br>
-`<tfoot>` Rodapé da Tabela<br>
-`<img src="">` Imagem<br>
-`<center>` Centralizar HTML<br>
-`<meta>` O elemento define qualquer informação de metadados que não podem ser definidos por outro elementos HTML<br>
-`<title>` Título da página web<br>
-`<header>` Cabeçalho do Layout<br>
-`<section>` Sessão do Layout<br>
-`<nav>` Navegação do Layout<br>
-`<article>` Artigo do Layout<br>
-`<aside>` Representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno<br>
-`<footer>` Rodapé do Layout<br>
+`&#62; &gt;`
+Sinal de maior que - `>`
+
+`&#160; &nbap;`
+Espaço sem quebra
+
+`&#169; &copy;`
+Símbolo de copyright - `©`
+
+`&#38; &amp;`
+E comercial - `&`
+
+`&#64; &Uuml;`
+Símbolo de arroba - `@`
+
+`&#149; &ouml;`
+Símbolo de ponto `.`
+
+`&#153; &ucirc;`
+Símbolo de marca resgistrada - `™`
