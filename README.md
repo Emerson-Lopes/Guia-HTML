@@ -6,6 +6,8 @@ HTML é uma linguagem de marcação utilizada na construção de páginas na Web
 ### **Sumário do Guia**
 Vamos ver como podemos quebrar o código em componentes diferentes:
 
+`<!--...-->` Comentario dentro do HTML, comentario serve para comentar algo do código ou alguma citação especifica que não aparecerá para o usuário. 
+
 `<html>...</html>`
 Esta tag especifica que a página foi escrita em HTML. Ela aparece na primeira linha da página. É utilizada prinicipalmente para mostrar que a página usa HTML5 - a versão mais recente da linguagem. Também conhecido como elemento root, esta tag pode ser considerada como uma tag pai para qualquer outra tag na página.
 
@@ -610,3 +612,29 @@ Símbolo de ponto `.`
 
 `&#153; &ucirc;`
 Símbolo de marca resgistrada - `™`
+
+### Atributos Globais mais utilizados
+
+`class`
+Classe, clasifica elementos, utilizada bastante com CSS.
+
+`contenteditable="..."`
+Serve para editar o conteúdo direto no navegador, recebendo true ou false. 
+
+`data-...="..."`
+
+
+`hidden`
+Esconde uma tag se necessário.
+
+`id="..."`
+Usado apenas uma vez por tag, utilizada bastante com CSS.
+
+`style="..."`
+Aplicar estilização direta na tag.
+
+`tabindex+"..."`
+Direciona a tecla TAB. Indicando a ordem de sequência.
+
+`title="..."`
+Define um título na tag..
